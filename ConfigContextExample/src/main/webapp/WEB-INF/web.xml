@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+                         "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+ <display-name>Archetype Created Web Application</display-name>
+ <context-param>
+  <param-name>context</param-name>
+  <param-value>This is the context for the web app. It will not change from servlet to servlet</param-value>
+ </context-param>
+ <servlet>
+  <servlet-name>ServletOne</servlet-name>
+  <servlet-class>com.revature.configcontextexample.servlets.ServletOne</servlet-class>
+  <init-param>
+   <param-name>config</param-name>
+   <param-value>This is the config for Servlet One.</param-value>
+  </init-param>
+ </servlet>
+ <servlet>
+  <servlet-name>ServletTwo</servlet-name>
+  <display-name>ServletTwo</display-name>
+  <servlet-class>com.revature.configcontextexample.servlets.ServletTwo</servlet-class>
+  <init-param>
+   <param-name>servlettwo</param-name>
+   <param-value>This is the config for servlet two.</param-value>
+  </init-param>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>ServletOne</servlet-name>
+  <url-pattern>/ServletOne</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>ServletTwo</servlet-name>
+  <url-pattern>/ServletTwo</url-pattern>
+ </servlet-mapping>
+ <welcome-file-list>
+  <welcome-file>/welcome.jsp</welcome-file>
+ </welcome-file-list>
+</web-app>
